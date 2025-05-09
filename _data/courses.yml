@@ -1,0 +1,15 @@
+- name: Calculus II
+  url: /courses/calc-ii/
+  description: Continuation of single variable calculus; techniques of integration, polar coordinates, analytic geometry, improper integrals, and infinite series.
+
+- name: Calculus-Based Physics I
+  url: /courses/calc-phys-i/
+  description: Covers the physics of kinematics, dynamics, and conservation laws and requires application of classical physics to both mathematical and conceptual problems.
+
+- name: 20th Century World History
+  url: /courses/20-history/
+  description: Investigates the geopoliticial trends that have shaped various global regions since the late nineteenth century.
+
+- name: English Composition II
+  url: /courses/comp-ii/
+  description: Expands and refines the objectives of English Composition I.

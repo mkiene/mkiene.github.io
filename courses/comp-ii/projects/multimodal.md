@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /courses/comp-i/projects/multimodal/
+permalink: /courses/comp-ii/projects/multimodal/
 ---
 
 <div class="title">Urgent Action is Necessary for Navigating the AI Arms Race</div>

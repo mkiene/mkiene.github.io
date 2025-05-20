@@ -185,7 +185,7 @@ GEM
     unicode-display_width (2.6.0)
     webrick (1.9.1)
     yell (2.2.2)
-    zeitwerk (2.7.2)
+    zeitwerk (2.7.3)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -196,7 +196,6 @@ PLATFORMS
   arm-linux-musleabihf
   arm64-darwin
   x86_64-darwin
-  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 

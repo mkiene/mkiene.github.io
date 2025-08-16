@@ -1,0 +1,20 @@
+@forward 'base';
+@forward 'components';
+@forward 'layout';
+@forward 'pages';
+
+@import "colors";
+
+img.tikz {
+  scale: 150%;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html:not([data-mode]),
+  html[data-mode=dark] {
+    img.tikz {
+      filter: invert(100%);
+    }
+  }
+}

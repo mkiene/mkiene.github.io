@@ -2,7 +2,8 @@
 ---
 
 img.tikz {
-  scale: 150%;
+  transform: scale(1.5);
+  transform-origin: center;
 }
 
 @media (prefers-color-scheme: dark) {

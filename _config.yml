@@ -189,6 +189,9 @@ defaults:
       layout: page
       permalink: /:title/
 
+plugins: 
+  - jekyll-sass-converter
+
 sass:
   style: compressed
 

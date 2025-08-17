@@ -1,47 +1,50 @@
-:root, [data-bs-theme=dark] {
-	/* --background-primary: #0f1016; */
-	--background-primary: transparent;
-	--background-secondary: #1a1d2533;
-	--table-zebra-secondary: #15171e22;
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]),
+  html[data-mode=dark] {
+    --prompt-tip-border: rgb(15, 164, 15, 0.6);
+    --prompt-info-border: #0075d188;
+    --prompt-warning-border: rgb(255, 165, 0, 0.6);
+    --prompt-danger-border: #cd020288;
+  }
+  html[data-mode=light] {
+    --prompt-tip-border: #03b303ff;
+    --prompt-info-border: #0070cbff;
+    --prompt-warning-border: #ef9c03ff;
+    --prompt-danger-border: #df3c30ff;
+  }
+}
 
-	/* --text-normal: #afafd7; */
-	--text-normal: #cec2ff;
-	--text-secondary: #afafd799;
-	/* --math-color: #cec2ff; */
-	--math-color: var(--text-normal);
+blockquote[class^=prompt-] {
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--blockquote-border-color);
+  border-radius: 6px;
+}
 
-	/* --callout-shadow: #0f101677; */
-	--callout-shadow: #00000077;
+blockquote[class^=prompt-] p {
+  margin-left: 1rem;
+  display: inline;
+}
 
-	--code-background: #1a1d2540;
+blockquote[class^=prompt-]::before {
+  position: relative;
+  display: inline;
+}
 
-	--info-color: #cec2ff;
-	--info-border-color: #cec2ffbb;
-	--info-background-color: #cec2ff10;
+blockquote.prompt-info {
+  border-color: var(--prompt-info-border);
+}
 
-	--hr-color: #afafd733;
+blockquote.prompt-tip {
+  border-color: var(--prompt-tip-border);
+}
 
-	--tip-color: #d0d1ac;
-	--tip-border-color: #d0d1acbb;
-	--tip-background-color: #d0d1ac10;
+blockquote.prompt-warning {
+  border-color: var(--prompt-warning-border);
+}
 
-	--note-color: #eb9486;
-	--note-border-color: #eb9486bb;
-	--note-background-color: #eb948610;
-
-	--remark-color: #00daad;
-	--remark-background-color: #00daad10;
-
-	--def-color: #FDCA40;
-	--def-background-color: #FDCA4010;
-	--def-border-color: #FDCA40bb;
-
-	--question-color: #E86A92;
-	--question-background-color: #E86A9210;
-
-	--header-color: var(--text-normal);
-	--sidebar-shadow: black;
-
+blockquote.prompt-danger {
+  border-color: var(--prompt-danger-border);
 }
 
 /* Example component tweak */
@@ -69,7 +72,7 @@
   height: .75rem;
   border-radius: 50%;
   background-color: var(--code-header-muted-color);
-  box-shadow: 1.25rem 0 0 var(--code-header-muted-color),2.5rem 0 0 var(--code-header-muted-color);
+  box-shadow: 1.25rem 0 0 var(--code-header-muted-color), 2.5rem 0 0 var(--code-header-muted-color);
 }
 
 .solution-toggle p {
@@ -85,7 +88,10 @@ details summary {
   content: "Show Solution";
   font-weight: bold;
 }
-.solution-toggle[open] summary::after { content: "Hide Solution"; }
+
+.solution-toggle[open] summary::after {
+  content: "Hide Solution";
+}
 
 @media (prefers-color-scheme: dark) {
 

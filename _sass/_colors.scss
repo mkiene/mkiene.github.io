@@ -1,9 +1,98 @@
+:root, [data-bs-theme=dark] {
+	/* --background-primary: #0f1016; */
+	--background-primary: transparent;
+	--background-secondary: #1a1d2533;
+	--table-zebra-secondary: #15171e22;
+
+	/* --text-normal: #afafd7; */
+	--text-normal: #cec2ff;
+	--text-secondary: #afafd799;
+	/* --math-color: #cec2ff; */
+	--math-color: var(--text-normal);
+
+	/* --callout-shadow: #0f101677; */
+	--callout-shadow: #00000077;
+
+	--code-background: #1a1d2540;
+
+	--info-color: #cec2ff;
+	--info-border-color: #cec2ffbb;
+	--info-background-color: #cec2ff10;
+
+	--hr-color: #afafd733;
+
+	--tip-color: #d0d1ac;
+	--tip-border-color: #d0d1acbb;
+	--tip-background-color: #d0d1ac10;
+
+	--note-color: #eb9486;
+	--note-border-color: #eb9486bb;
+	--note-background-color: #eb948610;
+
+	--remark-color: #00daad;
+	--remark-background-color: #00daad10;
+
+	--def-color: #FDCA40;
+	--def-background-color: #FDCA4010;
+	--def-border-color: #FDCA40bb;
+
+	--question-color: #E86A92;
+	--question-background-color: #E86A9210;
+
+	--header-color: var(--text-normal);
+	--sidebar-shadow: black;
+
+}
+
+/* Example component tweak */
+.solution-toggle {
+  padding: 4px 10px 4px 10px;
+  background-color: var(--highlight-bg-color);
+  border: 1px solid var(--hr-color);
+  border-radius: 6px;
+}
+
+.solution-toggle summary {
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--code-header-text-color);
+  font-size: 1rem;
+}
+
+.solution-toggle summary::before {
+  content: "";
+  display: inline-block;
+  maring-left: 1rem;
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  background-color: var(--code-header-muted-color);
+  box-shadow: 1.25rem 0 0 var(--code-header-muted-color),2.5rem 0 0 var(--code-header-muted-color);
+}
+
+.solution-toggle p {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+details summary {
+  list-style: none;
+}
+
+.solution-toggle summary::after {
+  content: "Show Solution";
+  font-weight: bold;
+}
+.solution-toggle[open] summary::after { content: "Hide Solution"; }
+
 @media (prefers-color-scheme: dark) {
 
   html:not([data-mode]),
   html[data-mode=dark] {
     img.tikz {
-      filter: invert(100%);
+      filter: invert(0.8);
     }
   }
 }

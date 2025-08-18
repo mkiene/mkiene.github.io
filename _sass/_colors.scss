@@ -119,3 +119,7 @@ html[data-mode="dark"] img.tikz { filter: invert(0.8); }
 .site-subtitle.fst-italic {
   font-style: normal !important;
 }
+
+.post-tail-wrapper .post-meta a:not(:hover), .content a:not(.img-link) {
+  border: none;
+}

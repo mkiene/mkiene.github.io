@@ -46,10 +46,21 @@ blockquote[class^="prompt-"]::before {
   display: inline;
 }
 
-blockquote.prompt-info    { border-color: var(--prompt-info-border); }
-blockquote.prompt-tip     { border-color: var(--prompt-tip-border); }
-blockquote.prompt-warning { border-color: var(--prompt-warning-border); }
-blockquote.prompt-danger  { border-color: var(--prompt-danger-border); }
+blockquote.prompt-info {
+  border-color: var(--prompt-info-border);
+}
+
+blockquote.prompt-tip {
+  border-color: var(--prompt-tip-border);
+}
+
+blockquote.prompt-warning {
+  border-color: var(--prompt-warning-border);
+}
+
+blockquote.prompt-danger {
+  border-color: var(--prompt-danger-border);
+}
 
 /* =========================
    Solution toggle
@@ -73,14 +84,15 @@ blockquote.prompt-danger  { border-color: var(--prompt-danger-border); }
 .solution-toggle summary::before {
   content: "";
   display: inline-block;
-  margin-left: 1rem; /* fixed typo */
+  margin-left: 1rem;
+  /* fixed typo */
   width: .75rem;
   height: .75rem;
   border-radius: 50%;
   background-color: var(--code-header-muted-color);
   box-shadow:
     1.25rem 0 0 var(--code-header-muted-color),
-    2.5rem  0 0 var(--code-header-muted-color);
+    2.5rem 0 0 var(--code-header-muted-color);
 }
 
 .solution-toggle p {
@@ -88,7 +100,9 @@ blockquote.prompt-danger  { border-color: var(--prompt-danger-border); }
   margin-bottom: 0;
 }
 
-details summary { list-style: none; }
+details summary {
+  list-style: none;
+}
 
 .solution-toggle summary::after {
   content: "Show Solution";
@@ -102,14 +116,20 @@ details summary { list-style: none; }
 /* =========================
    TikZ image inversion
    ========================= */
-img.tikz { filter: none; }
+img.tikz {
+  filter: none;
+}
 
 /* Explicit dark mode */
-html[data-mode="dark"] img.tikz { filter: invert(0.8); }
+html[data-mode="dark"] img.tikz {
+  filter: invert(0.8);
+}
 
 /* System dark when no explicit mode */
 @media (prefers-color-scheme: dark) {
-  html:not([data-mode]) img.tikz { filter: invert(0.8); }
+  html:not([data-mode]) img.tikz {
+    filter: invert(0.8);
+  }
 }
 
 /* =========================
@@ -120,6 +140,7 @@ html[data-mode="dark"] img.tikz { filter: invert(0.8); }
   font-style: normal !important;
 }
 
-.post-tail-wrapper .post-meta a:not(:hover), .content a:not(.img-link) {
+.post-tail-wrapper .post-meta a:not(:hover),
+.content a:not(.img-link) {
   border: none;
 }

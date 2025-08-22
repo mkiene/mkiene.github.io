@@ -120,6 +120,10 @@ img.tikz {
   filter: none;
 }
 
+mjx-container {
+  font-size: 105% !important;
+}
+
 /* Explicit dark mode */
 html[data-mode="dark"] img.tikz {
   filter: invert(0.8);
@@ -128,6 +132,9 @@ html[data-mode="dark"] img.tikz {
 /* System dark when no explicit mode */
 @media (prefers-color-scheme: dark) {
   html:not([data-mode]) img.tikz {
+    filter: invert(0.8);
+  }
+  html:not([data-mode]) .dcg-calculator-api-container-v1_11 .dcg-container.dcg-inverted-colors {
     filter: invert(0.8);
   }
 }
@@ -143,4 +150,21 @@ html[data-mode="dark"] img.tikz {
 .post-tail-wrapper .post-meta a:not(:hover),
 .content a:not(.img-link) {
   border: none;
+}
+
+.desmos-embed {
+  display: block;
+  margin: auto;
+  margin-bottom: 1.5rem !important;
+  margin-top: 1.5rem !important;
+  max-width: 250px !important;
+  width: 50% !important;
+  aspect-ratio: 1 / 1 !important;
+  // border: 1px solid #ccc;
+}
+
+/* Target the inner container */
+.dcg-calculator-api-container-v1_11 .dcg-container {
+  background: transparent !important;
+  border-radius: 6px;
 }

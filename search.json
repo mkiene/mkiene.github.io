@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign docs = site.pages | concat: site.posts %}
+{% for doc in docs %}
+  {
+    "title": {{ doc.title | default: doc.url | jsonify }},
+    "url": {{ doc.url | relative_url | jsonify }},
+    "content": {{ doc.content | strip_html | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

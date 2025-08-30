@@ -1,0 +1,36 @@
+/* =========================
+   Color variables (light = default)
+   ========================= */
+:root {
+  --prompt-tip-border: #03b303ff;
+  --prompt-info-border: #0070cbff;
+  --prompt-warning-border: #ef9c03ff;
+  --prompt-danger-border: #df3c30ff;
+  --main-border-color: #e3e3e3;
+  --bs-border-width: 2px;
+}
+
+/* Explicit dark mode via data attribute */
+html[data-mode="dark"] {
+  --prompt-tip-border: rgba(15, 164, 15, 0.6);
+  --prompt-info-border: #0075d188;
+  --prompt-warning-border: rgba(255, 165, 0, 0.6);
+  --prompt-danger-border: #cd020288;
+  // --main-border-color: rgb(64, 65, 65);
+}
+
+/* Respect system dark when no explicit data-mode is set */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) {
+    --prompt-tip-border: rgba(15, 164, 15, 0.6);
+    --prompt-info-border: #0075d188;
+    --prompt-warning-border: rgba(255, 165, 0, 0.6);
+    --prompt-danger-border: #cd020288;
+    // --main-border-color: rgb(64, 65, 65);
+  }
+  html[data-mode=light] {
+    --main-border-color: #e3e3e3;
+  }
+}
+
+

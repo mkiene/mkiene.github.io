@@ -1,0 +1,20 @@
+/* Gantari */
+@import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Computer Modern Serif */
+@import url('https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css');
+
+/* League Spartan */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+body, header .post-desc, #toc-bar .label, #search-results a, h1, h2, h3, h4, h5, #toc-solo-trigger .label {
+  font-family: "Gantari", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+// article.px-1 .content {
+//   font-family: "Computer Modern Serif", serif;
+// }

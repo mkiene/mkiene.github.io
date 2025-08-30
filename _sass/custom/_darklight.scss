@@ -1,0 +1,23 @@
+/* =========================
+   TikZ image inversion
+   ========================= */
+
+img.tikz {
+  filter: none;
+}
+
+/* Explicit dark mode */
+html[data-mode="dark"] img.tikz {
+  filter: invert(0.8);
+}
+
+/* System dark when no explicit mode */
+@media (prefers-color-scheme: dark) {
+  html:not([data-mode]) img.tikz {
+    filter: invert(0.8);
+  }
+
+  html:not([data-mode]) .dcg-calculator-api-container-v1_11 .dcg-container.dcg-inverted-colors {
+    filter: invert(0.8);
+  }
+}

@@ -1,0 +1,59 @@
+@import "fonts";
+@import "colors";
+@import "prompts";
+
+main h2 {
+  border-bottom: var(--bs-border-width) solid var(--main-border-color);
+  margin-bottom: 2rem;
+}
+
+h2 .me-2 {
+  position: absolute;
+  transform: translate(2rem, 0.5em) !important;
+  background-color: var(--main-bg) !important;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+main h4 {
+  border-bottom: var(--bs-border-width) dashed var(--main-border-color);
+  margin-bottom: 1rem !important;
+}
+
+h4 .me-2 {
+  position: absolute;
+  transform: translate(2rem, 0.5em) !important;
+  background-color: var(--main-bg) !important;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+/* =========================
+   Site Subtitle
+   ========================= */
+
+.site-subtitle.fst-italic {
+  font-style: normal !important;
+}
+
+.post-tail-wrapper .post-meta a:not(:hover),
+.content a:not(.img-link) {
+  border: none;
+}
+
+.desmos-embed {
+  display: block;
+  margin: auto;
+  margin-bottom: 1.5rem !important;
+  margin-top: 1.5rem !important;
+  max-width: 250px !important;
+  width: 50% !important;
+  aspect-ratio: 1 / 1 !important;
+  // border: 1px solid #ccc;
+}
+
+/* Target the inner container */
+.dcg-calculator-api-container-v1_11 .dcg-container {
+  background: transparent !important;
+  border-radius: 6px;
+}

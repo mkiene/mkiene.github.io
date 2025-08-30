@@ -1,0 +1,88 @@
+/* =========================
+   Prompt blocks
+   ========================= */
+blockquote[class^="prompt-"] {
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--blockquote-border-color);
+  border-radius: 6px;
+}
+
+blockquote[class^="prompt-"] p {
+  margin-left: 1rem;
+  display: inline;
+}
+
+blockquote[class^="prompt-"]::before {
+  position: relative;
+  display: inline;
+}
+
+blockquote.prompt-info {
+  border-color: var(--prompt-info-border);
+}
+
+blockquote.prompt-tip {
+  border-color: var(--prompt-tip-border);
+}
+
+blockquote.prompt-warning {
+  border-color: var(--prompt-warning-border);
+}
+
+blockquote.prompt-danger {
+  border-color: var(--prompt-danger-border);
+}
+
+/* =========================
+   Solution toggle
+   ========================= */
+.solution-toggle {
+  padding: 4px 10px;
+  background-color: var(--highlight-bg-color);
+  border: 1px solid var(--hr-color);
+  border-radius: 6px;
+}
+
+.solution-toggle summary {
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--code-header-text-color);
+  font-size: 1rem;
+}
+
+.solution-toggle summary::before {
+  content: "";
+  display: inline-block;
+  margin-left: 1rem;
+  /* fixed typo */
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  background-color: var(--code-header-muted-color);
+  box-shadow:
+    1.25rem 0 0 var(--code-header-muted-color),
+    2.5rem 0 0 var(--code-header-muted-color);
+}
+
+.solution-toggle p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+details summary {
+  list-style: none;
+}
+
+.solution-toggle summary::after {
+  content: "Show Solution";
+  font-weight: bold;
+}
+
+.solution-toggle[open] summary::after {
+  content: "Hide Solution";
+}
+
+

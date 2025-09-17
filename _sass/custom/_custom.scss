@@ -2,6 +2,11 @@
 @import "colors";
 @import "prompts";
 
+.content {
+  font-size: var(--bs-body-font-size);
+}
+
+/*
 main h2 {
   border-bottom: var(--bs-border-width) solid var(--main-border-color);
   margin-bottom: 2rem;
@@ -27,6 +32,7 @@ h4 .me-2 {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
+*/
 
 /* =========================
    Site Subtitle

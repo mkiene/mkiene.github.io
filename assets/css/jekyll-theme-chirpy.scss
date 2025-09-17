@@ -1,17 +1,17 @@
 ---
 ---
 
-@use 'main
-{%- if jekyll.environment == 'production' -%}
-  .bundle
-{%- endif -%}
-';
+// @use 'main
+// {%- if jekyll.environment == 'production' -%}
+//   .bundle
+// {%- endif -%}
+// ';
 
 /* append your custom style below */
 
-// @forward 'base';
-// @forward 'components';
-// @forward 'layout';
-// @forward 'pages';
+@forward 'base';
+@forward 'components';
+@forward 'layout';
+@forward 'pages';
 
 @import "custom/custom";
